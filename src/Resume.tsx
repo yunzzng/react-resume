@@ -22,10 +22,10 @@ const Resume: FC = () => {
           <ul className={styles.list}>
             <li>yun.zzng9.me@gmail.com</li>
             <li>
-              <a href="https://github.com">
+              <a href="https://github.com/yunzzng?tab=repositories&q=&type=public&language=&sort=" target="_blank" rel="noopener noreferrer">
                 <img src={githubIcon} alt="GitHub" className={styles.icon} />
               </a>
-              <a href="https://leeyunseul.notion.site/1a023f8c54e680b4965deb2b1706fe03">
+              <a href="https://leeyunseul.notion.site/1a023f8c54e680b4965deb2b1706fe03" target="_blank" rel="noopener noreferrer">
                 <img src={notionIcon} alt="Notion" className={styles.icon} />
               </a>
             </li>
