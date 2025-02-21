@@ -137,3 +137,23 @@
   border-radius: 8px;
   padding-left: 10px;
 }
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  
+}
+
+.portfolioCard {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  border-left: 4px solid #333;
+}
+
+.portfolioDescription, .portfolioDate{
+  font-size: 14px;
+}

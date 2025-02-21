@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./resume.module.css";
 import certifications from "./data/certifications";
+import portfolios from "./data/portfolios";
 import educationAndExperience from "./data/educationAndExperience";
 import skills from "./data/skills";
 import profileImg from "/img/yunseul.jpg";
@@ -42,6 +43,7 @@ const Resume: FC = () => {
           </ul>
         </div>
 
+        {/* 스킬 */}
         <div className={styles.section}>
           <h3 className={styles.sectionTitle}>스킬</h3>
           <div className={styles.skillIconsContainer}>
@@ -72,6 +74,21 @@ const Resume: FC = () => {
                   {exp.company} ({exp.period})
                 </p>
                 <p className={styles.jobDescription}>{exp?.description}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>프로젝트</h2>
+          <div className={styles.portfolioGrid}>
+            {portfolios.map((portfolio, index) => (
+              <div key={index} className={styles.portfolioCard}>
+                <h3 className={styles.portfolioTitle}>{portfolio.title}</h3>
+                <p className={styles.portfolioDescription}>
+                  {portfolio.description}
+                </p>
+                <span className={styles.portfolioDate}>{portfolio.date}</span>
               </div>
             ))}
           </div>
