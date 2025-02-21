@@ -43,7 +43,6 @@ const Resume: FC = () => {
           </ul>
         </div>
 
-        {/* 스킬 */}
         <div className={styles.section}>
           <h3 className={styles.sectionTitle}>스킬</h3>
           <div className={styles.skillIconsContainer}>
@@ -83,7 +82,7 @@ const Resume: FC = () => {
           <h2 className={styles.sectionTitle}>프로젝트</h2>
           <div className={styles.portfolioGrid}>
             {portfolios.map((portfolio, index) => (
-              <div key={index} className={styles.portfolioCard}>
+              <div key={index} className={styles.portfolioCard} onClick={() => window.open(portfolio.link, "_blank")}>
                 <h3 className={styles.portfolioTitle}>{portfolio.title}</h3>
                 <p className={styles.portfolioDescription}>
                   {portfolio.description}
