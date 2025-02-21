@@ -22,10 +22,18 @@ const Resume: FC = () => {
           <ul className={styles.list}>
             <li>yun.zzng9.me@gmail.com</li>
             <li>
-              <a href="https://github.com/yunzzng?tab=repositories&q=&type=public&language=&sort=" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/yunzzng?tab=repositories&q=&type=public&language=&sort="
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={githubIcon} alt="GitHub" className={styles.icon} />
               </a>
-              <a href="https://leeyunseul.notion.site/1a023f8c54e680b4965deb2b1706fe03" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://leeyunseul.notion.site/1a023f8c54e680b4965deb2b1706fe03"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={notionIcon} alt="Notion" className={styles.icon} />
               </a>
             </li>
@@ -36,8 +44,10 @@ const Resume: FC = () => {
           <h3 className={styles.sectionTitle}>교육</h3>
           <ul className={styles.list}>
             {educationAndExperience.education.map((edu, index) => (
-              <li key={index}>
-                {edu.school} ({edu.period})
+              <li key={index} className={styles.eduItem}>
+                <div className={styles.school}>{edu.school}</div>
+                <div className={styles.degree}>{edu.degree}</div>
+                <div className={styles.period}>{edu.period}</div>
               </li>
             ))}
           </ul>
@@ -82,7 +92,11 @@ const Resume: FC = () => {
           <h2 className={styles.sectionTitle}>프로젝트</h2>
           <div className={styles.portfolioGrid}>
             {portfolios.map((portfolio, index) => (
-              <div key={index} className={styles.portfolioCard} onClick={() => window.open(portfolio.link, "_blank")}>
+              <div
+                key={index}
+                className={styles.portfolioCard}
+                onClick={() => window.open(portfolio.link, "_blank")}
+              >
                 <h3 className={styles.portfolioTitle}>{portfolio.title}</h3>
                 <p className={styles.portfolioDescription}>
                   {portfolio.description}
