@@ -20,7 +20,7 @@ const Resume: FC = () => {
         <div className={styles.section}>
           <h3 className={styles.sectionTitle}>연락처</h3>
           <ul className={styles.list}>
-            <li>yun.zzng9.me@gmail.com</li>
+            <li>yun.zzang9.me@gmail.com</li>
             <li>
               <a
                 href="https://github.com/yunzzng?tab=repositories&q=&type=public&language=&sort="
