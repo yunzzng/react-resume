@@ -54,6 +54,18 @@ const Resume: FC = () => {
         </div>
 
         <div className={styles.section}>
+          <h3 className={styles.sectionTitle}>자격증 및 수상</h3>
+          <ul className={styles.list}>
+            {certifications.map((cert, index) => (
+              <li key={index}>
+                <div className={styles.certificationName}>{cert.name}</div>
+                <div className={styles.period}>({cert.date})</div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className={styles.section}>
           <h3 className={styles.sectionTitle}>스킬</h3>
           <div className={styles.skillIconsContainer}>
             {skills.map((skill, index) => (
@@ -95,19 +107,85 @@ const Resume: FC = () => {
               <div
                 key={index}
                 className={styles.portfolioCard}
-                onClick={() => window.open(portfolio.link, "_blank")}
+                onClick={() => window.open(portfolio.output, "_blank")}
               >
-                <h3 className={styles.portfolioTitle}>{portfolio.title}</h3>
-                <p className={styles.portfolioDescription}>
-                  {portfolio.description}
-                </p>
-                <span className={styles.portfolioDate}>{portfolio.date}</span>
+                <div className={styles.portfolioContent}>
+                  <div className={styles.portfolioText}>
+                    <div className={styles.portfolioHeader}>
+                      <h3 className={styles.portfolioTitle}>
+                        {portfolio.title}
+                        <span className={styles.portfolioDate}>
+                          {portfolio.date}
+                        </span>
+                      </h3>
+                    </div>
+
+                    <p className={styles.portfolioDescription}>
+                      <strong className={styles.projectLabel}>
+                        {portfolio.subtitle}
+                      </strong>
+                      <span className={styles.projectText}>
+                        {portfolio.description}
+                      </span>
+                    </p>
+
+                    <hr></hr>
+
+                    <p className={styles.portfolioField}>
+                      <strong>기여도:</strong>
+                      <span className={styles.portfolioValue}>
+                        {portfolio.contribution}
+                      </span>
+                    </p>
+
+                    {portfolio.dataset && (
+                      <div className={styles.portfolioField}>
+                        <strong>데이터셋:</strong>
+                        <ul className={styles.portfolioList}>
+                          {portfolio.dataset.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {portfolio.analysis && (
+                      <div className={styles.portfolioField}>
+                        <strong>분석결과:</strong>
+                        <ul className={styles.portfolioList}>
+                          {portfolio.analysis.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {portfolio.insight && (
+                      <div className={styles.portfolioField}>
+                        <strong>인사이트:</strong>
+                        <ul className={styles.portfolioList}>
+                          {portfolio.insight.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className={styles.portfolioImageBox}>
+                    <img
+                      src={portfolio.image}
+                      alt={`${portfolio.title} 썸네일`}
+                      className={styles.portfolioImage}
+                    />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className={styles.section}>
+        {/* <section className={styles.section}>
           <h2 className={styles.sectionTitle}>자격증 & 수상</h2>
           <ul className={styles.list}>
             {certifications.map((cert, index) => (
@@ -117,7 +195,7 @@ const Resume: FC = () => {
               </li>
             ))}
           </ul>
-        </section>
+        </section> */}
       </main>
     </div>
   );
