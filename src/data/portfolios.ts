@@ -47,7 +47,7 @@ const portfolios = [
       "컴포넌트 설계의 중요성: 재사용성과 확장성을 고려한 설계가 유지보수성을 높임"
     ],
     output: "https://www.npmjs.com/package/yunseul-ui-elements" ,
-    image: "https://img.notionusercontent.com/s3/prod-files-secure%2F341c6f72-8b12-449d-a354-577be126f47a%2F5e643eff-1e8e-4369-af29-92b900366346%2Fimage.png/size/w=630?exp=1750248697&sig=XKuNOgwG-jGcHkupmnU5-e6TJN7DcrLcI3HjXy3w7Kc&id=21523f8c-54e6-80b4-b973-e2a1424d61e6&table=block" 
+    image: "/img/ui-kit.png" 
   },
   // {
   //   title: "E-Office",
@@ -86,7 +86,7 @@ const portfolios = [
       "커뮤니티 무한 스크롤 기능 구현을 통해 성능 최적화 및 사용자 경험 개선 방법을 익힘"
     ],
     output: "https://petple-front.vercel.app/" ,
-    image: "https://img.notionusercontent.com/s3/prod-files-secure%2F341c6f72-8b12-449d-a354-577be126f47a%2Ff2c2f159-a238-427a-a8d6-8e1ab01aac38%2Fpetple.png/size/w=590?exp=1750249207&sig=RopkUgNs12_fw3WH612E9iIGqWgWs8yVNH9D7yovlNw&id=1a023f8c-54e6-801c-8ad7-e9d9f8c0880f&table=block" 
+    image: "/img/petple.png" 
   },
   // {
   //   title: "Vite-ci",
@@ -116,7 +116,7 @@ const portfolios = [
       "Vite 플러그인 개발 경험: 추가적인 설정 없이 플러그인 설치만으로 최적화 기능 사용 가능"
     ],
     output: "https://www.npmjs.com/package/vite-plugin-optimize-image" ,
-    image: "https://img.notionusercontent.com/s3/prod-files-secure%2F341c6f72-8b12-449d-a354-577be126f47a%2F5f109ab0-b983-4838-a1d3-2861163f07ea%2Fimage.png/size/w=630?exp=1750249090&sig=WUBGHCqCGMnLLgIH-eRVyhrpS2BLBDV-Z0jmMp3ifKU&id=21523f8c-54e6-800c-8af1-f393a623da5f&table=block" 
+    image: "/img/plugin.png" 
   },
 ];
 
